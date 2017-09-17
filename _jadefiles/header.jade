@@ -1,0 +1,50 @@
+mixin wx-product(name, desc)
+	.wx-product
+		.wx-product--image
+		.wx-product--name=name
+		.wx-product--desc=desc
+
+mixin wx-service(name, desc)
+	.wx-service
+		.wx-service--left
+			.wx-service--image
+		.wx-service--right
+			.wx-service--name=name
+			.wx-service--desc=desc
+			a(href="#").wx-service--cta.cta-btn See details
+
+header.wx-header
+	.wx-header--logo
+	nav.wx-header--nav
+		ul.wx-nav--list
+			li: a(href="#").active Home
+			li: a(href="#") Products
+			li: a(href="#") Services
+			li: a(href="#") Clients
+			li: a(href="#") About
+section.wx-hero
+	h2.wx-hero--title Integrating Globally Connected Crowds <br> We simplify the complexities
+	a.cta-btn See products
+	.wx-hero--image
+
+section.wx-products
+	h3.wx-section--title We Supercharge Business
+	.wx-products--list
+		+wx-product('People', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dolore?')
+		+wx-product('Processes', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dolore?')
+		+wx-product('systems', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, dolore?')
+
+section.wx-services
+	.wx-services
+		+wx-service('Property Tax Software', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum suscipit, in error ratione possimus enim.')
+		+wx-service('Data Acquisition', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum suscipit, in error ratione possimus enim.')
+
+section.wx-clients
+	.wx-client
+		.wx-client--image
+		.wx-client--content
+			.wx-client--response Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nam provident ratione magnam inventore, expedita. Asperiores dolorem sit deserunt provident!
+			.wx-client
+				.wx-company--thumb
+				.wx-client--name
+				.wx-client-position
